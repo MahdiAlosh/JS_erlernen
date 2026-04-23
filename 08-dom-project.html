@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM Project
+  </title>
+  <link rel="stylesheet" href="styles/08-style.css">
+</head>
+
+<body>
+  <h4>YouTube Subscribe Button</h4>
+  <button onclick="subscribe()" class="js-subscribe-button subscribe">Subscribe</button>
+  <!-- <br><br> -->
+  <h4>Rock Paper Scissors</h4>
+  <p><a href="07-r-p-s-objects.html" target="_blank">Click here</a></p>
+  <br>
+
+  <h4>Amazon Shipping Calculator</h4>
+  <p>Orders under $40 = +$10 shipping</p>
+  <p>Orders over $40 = FREE shipping</p>
+
+  <label for="order"></label>
+  <input type="number" name="order" class="cost-input" placeholder="Cost of Order" onkeydown="enter(event)">
+
+  <button class="calculate-button" onclick="calculator()">Calculate</button>
+  <p class="show_result" id="result"></p>
+
+  <script src="scripts/08-code.js"></script>
+
+</body>
+
+</html>

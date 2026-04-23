@@ -1,0 +1,43 @@
+body{
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon{
+  height: 50px; /* resizing the images */ 
+}
+
+.move-button{
+  background-color: transparent;
+  border: 3px solid white; /* dashes dotted */
+  width: 100px;
+  height: 100px;
+  border-radius: 50px; /* should be almost the half of hight or widht */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.scores{
+  margin-top: 60px;
+}
+
+.reset-button,
+.auto-play-button{
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}

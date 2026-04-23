@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Objects</title>
+  <link rel="stylesheet" href="styles/07-style.css">
+</head>
+
+<body>
+  <h3 class="title">Rock Paper Scissors</h3>
+  <!--  with Score as Object using DOM -->
+
+  <button onclick="
+    pickMove('rock')" class="move-button"><img src="images/rock-emoji.png" class="move-icon"></button>
+
+  <button onclick="
+    pickMove('paper')" class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+
+  <button onclick="
+    pickMove('scissors')" class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
+  <br>
+
+  <p class="show_result result"></p>
+  <p class="show_moves moves"></p>
+  <p class="show_score scores"></p>
+
+  <button onclick="reset()" class="reset-button">Reset Score</button>
+
+  <script src="scripts/07-code.js"></script>
+
+  <!-- <script>
+    const product1 = {
+      name: "Game",
+      'delivery-time': '2 day',
+      rating: {
+        stars: 4.5,
+        count: 40
+      },
+      fun: function function1() {
+        console.log("function inside object");
+      }
+    };
+    console.log(product1);
+    console.log(product1.name);
+    console.log(product1['delivery-time']);
+    console.log(product1.rating.count);
+    product1.fun()
+    console.log(JSON.stringify(product1)); // JSON doesn't support functions!
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const product2 = {
+      message: "Good job!",
+      price: 799
+    };
+    // shortcut to access to a porberty of an Object! => destructuring method
+    const { message, price } = product2;
+    console.log(message);
+    console.log(price);
+
+    // shorthand proberty method
+    const product3 = {
+      // message: message
+      message,
+      // method: function function2() {
+      //   console.log('method');
+      // },
+      // Shorthand Method
+      method() {
+        console.log('method');
+      }
+    };
+    console.log(product3);
+    product3.method();
+
+
+  </script> -->
+</body>
+
+</html>

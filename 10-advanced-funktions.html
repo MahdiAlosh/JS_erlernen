@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+
+<body>
+  <button onclick="" class="js-button">Click</button>
+  <script>
+
+    /* const buttonElement = document.querySelector(".js-button");
+    // we can save a function in a Variable:
+    const eventListener = () => {
+      console.log('has been clicked');
+    };
+
+    // listener has 2 Parameters (event, function)
+    // this way do exactly the same as onclick="", but this way has advantage: 1. Muliple eent listener for an event
+    // 2. We can remove an event listener .removeEventListener()
+    buttonElement.addEventListener('click', eventListener);
+
+    // 1 param: event, 2. param: function
+    buttonElement.removeEventListener('click', eventListener);
+
+    buttonElement.addEventListener('click', () => {
+      console.log('has been clicked_2');
+    });
+    */
+
+    /*
+    function greeting() {
+      console.log("Hello");
+    }
+    greeting();
+    const num = 2;
+    const function_1 = function () { // replacing "function greeting" with just function, that calls "Anonymous function"
+      console.log("Hello....");
+    }; // if the value of funktion is saved in a variable, ';' should be added to }
+
+    console.log(function_1);
+    console.log(typeof function_1);
+    function_1(); // Calling the function
+
+    const object1 = { // functions are values too
+      num: 2,
+      fun: function () {// using an anonymous fun. for "function greeting()"
+        console.log("Hello.... there!");
+      }
+    };
+    object1.fun();
+
+    function display(param) {
+      console.log(param);
+    }
+
+    display(12); // passing a value into an function or function into func.
+
+    function run(param) {
+      param(); // param contains a function => just call it!
+      // this technic: Passing a function into another function
+    }
+    run(function () { // the function inside calls: callback function
+      console.log("Hello .... 4");
+    });
+    */
+
+    /*
+    setTimeout(function () { // setTimeout: 1 param: function we want to call
+      console.log("Timeout");
+    },
+      3000 // 2 param: how long to wait befor calling the function in ms
+    );
+
+    console.log('Next line');
+    // Synchronous Code: will wait for one line to finish befor going to the next
+
+    // same parameters like setTimeout
+    setInterval(function () {
+      console.log("Interval");
+    },
+      3000
+    );
+    console.log('Next line 2');
+    // It will keep running a function in future every 3 sec.
+    */
+
+    /*
+    // ++++++++++ forEach +++++++++
+    [
+      "make dinner",
+      "wash dishes",
+      "watch film"
+    ].forEach(function (value, index) {
+      if (value === "wash dishes") {
+        return; // it's 'continue' in normal 'for loop'
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+    function greeting() {
+      console.log("Hi!");
+    }
+    greeting();
+    //so far both functions do same thing!
+    const arrowFunction = () => {
+      console.log("Hello!");
+    };
+    arrowFunction();
+
+    //advantage of Arrow function:
+    //1. if arrowFunc. has just one parameter, we don't need the ()
+    const onParam = param => {
+      console.log(param + 1);
+    };
+    onParam(2);
+    //2. if it has just one line, we can make a shortcut
+    const oneLine = () => 2 + 2;
+    console.log(oneLine()); // this time the func. behive like variable!!
+    // that why we should put it in console.log(<name of function()>)
+
+    console.log("===========");
+    //make brevius example with => func.
+    [
+      "make dinner",
+      "wash dishes",
+      "watch film"
+    ].forEach((value, index) => {
+      if (value === "wash dishes") {
+        return; // it's 'continue' in normal 'for loop'
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+    const object2 = {
+      method: () => {
+
+      },
+      method() {
+
+      }
+    };
+    */
+
+    // ++++++++++ filter +++++++++
+    // syntax exactly like forEach()
+    // 1. creating a new array[], 2. return true => put value in array, 3. return false => not put value in array
+    console.log([1, -3, 5].filter((value, index) => {
+      /* if (value >= 0) {
+        return true;
+      } else {
+        return false;
+      } */
+      return value >= 0;
+    }));
+
+    // ++++++++ map +++++++
+    // transform an array into another array
+    // make copy of these number doubled [2, 2, 69]
+    console.log([1, 1, 3].map((value, index) => {
+      return value * 2;
+    }));
+
+    // shortcut!!!
+    console.log([1, 1, 3].map(value => value * 2));
+
+
+
+  </script>
+</body>
+
+</html>

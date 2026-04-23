@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TODO List</title>
+  <link rel="stylesheet" href="styles/09-style.css">
+</head>
+
+<body>
+  <p>TODO List</p>
+
+  <div class="todo-input-grid">
+    <input type="text" id="todo" placeholder="Todo name" class="js-name-input name-input" onkeydown="enter(event)">
+
+    <input type="date" id="date" placeholder="yyyy-mm-dd" class="js-date-input date-input" onkeydown="enter(event)">
+
+    <!-- <button class="add-todo-button js-add-todo-button" onclick="addTodo()">Add</button> -->
+    <button class="add-todo-button js-add-todo-button">Add</button>
+
+    <div class="js-todo-list todo-grid"></div> <!--div because p doesn't support adding another p -->
+    <!-- div has in standard no style => is easier to control -->
+  </div>
+
+
+  <script src="scripts/09-code.js"></script>
+
+</body>
+
+</html>
