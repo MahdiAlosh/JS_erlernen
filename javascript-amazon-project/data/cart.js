@@ -50,6 +50,7 @@ class Cart {
         deliveryOptionId: '1'
       });
     }
+    this.saveToStorage();
   }
 
   removeFromCart(productId) {
@@ -61,7 +62,7 @@ class Cart {
     }
   });
 
-  this.cart = newCart;
+  this.cartItems = newCart;
   this.saveToStorage();
   }
 
@@ -105,7 +106,7 @@ class Cart {
 
 
 export const cart = new Cart('cart');
-cart.addToCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
+// cart.addToCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
 console.log(cart);
 
 export const businessCart = new Cart('cart-business');

@@ -191,7 +191,7 @@ export function renderOrderSummary() {
       // console.log('Cart:', cart);
       // console.log('Selected Product ID:', productId);
       // console.log('Selected Delivery Option ID:', deliveryOptionId);
-      updateDeliveryOption(productId, deliveryOptionId);
+      cart.updateDeliveryOption(productId, deliveryOptionId);
       //? From 2:
       renderOrderSummary();
       //* update the site automaticlly when choosing a delivery option
@@ -288,7 +288,7 @@ export function renderOrderSummary() {
         );
         const newQuantity = Number(quantityInput.value);
 
-        updateQuantity(productId, newQuantity);
+        cart.updateQuantity(productId, newQuantity);
 
         const quantityLabel = document.querySelector(
           `.js-quantity-label-${productId}`
