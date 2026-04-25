@@ -1,9 +1,9 @@
 import {
   cart,
-  removeFromCart,
-  calculateCartQuantity,
-  updateQuantity,
-  updateDeliveryOption,
+  // removeFromCart,
+  // calculateCartQuantity,
+  // updateQuantity,
+  // updateDeliveryOption,
 } from "../../data/cart.js";
 import { products, getProduct } from "../../data/products.js";
 // import { formatCurrency } from "./utils/money.js";
@@ -31,7 +31,7 @@ const deliveryDate = today.add(7, "days");
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
 
-  cart.forEach((cartItem) => {
+  cart.cartItems.forEach((cartItem) => {
     const productId = cartItem.productId;
 
     const matchingProduct = getProduct(productId);
@@ -203,7 +203,7 @@ export function renderOrderSummary() {
     link.addEventListener("click", () => {
       //by using a touch data-attribute
       const productId = link.dataset.productId;
-      removeFromCart(productId);
+      cart.removeFromCart(productId);
       /**
        * Step to remove an Element (Product):
        * 1. Use the DOM to get the element to remove
@@ -221,7 +221,7 @@ export function renderOrderSummary() {
   });
 
   function updateCartQuantity() {
-    const cartQuantity = calculateCartQuantity();
+    const cartQuantity = cart.calculateCartQuantity();
 
     document.querySelector(
       ".js-return-to-home-link"
@@ -255,7 +255,7 @@ export function renderOrderSummary() {
       );
       const newQuantity = Number(quantityInput.value);
 
-      updateQuantity(productId, newQuantity);
+      cart.updateQuantity(productId, newQuantity);
 
       const quantityLabel = document.querySelector(
         `.js-quantity-label-${productId}`
