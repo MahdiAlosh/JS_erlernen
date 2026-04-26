@@ -1,4 +1,6 @@
-class Products {
+import formatCurrency from "../scripts/utils/money.js";
+
+export class Products {
   id;
   image;
   name;
@@ -12,21 +14,30 @@ class Products {
     this.rating = productDatails.rating;
     this.priceCents = productDatails.priceCents;
   }
+
+  getStarsURL() {
+    return `images/ratings/rating-${this.rating.stars * 10}.png`;
+  }
+
+  getPrice() {
+    return `$${formatCurrency(this.priceCents)}`;
+  }
+
 }
 
-const product1 = new Products({
-  id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-  image: "images/products/athletic-cotton-socks-6-pairs.jpg",
-  name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
-  rating: {
-    stars: 4.5,
-    count: 87
-  },
-  priceCents: 1090,
-  keywords: [
-    "socks",
-    "sports",
-    "apparel"
-  ]
-});
-console.log(product1);
+// const product1 = new Products({
+//   id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+//   image: "images/products/athletic-cotton-socks-6-pairs.jpg",
+//   name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+//   rating: {
+//     stars: 4.5,
+//     count: 87
+//   },
+//   priceCents: 1090,
+//   keywords: [
+//     "socks",
+//     "sports",
+//     "apparel"
+//   ]
+// });
+// console.log(product1);
