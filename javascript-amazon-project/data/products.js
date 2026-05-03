@@ -1,4 +1,4 @@
-import { Products } from "../backend/products.js";
+import { Products, Clothing } from "../backend/products.js";
 
 export function getProduct(productId) {
   let matchingProduct;
@@ -484,7 +484,12 @@ export const products = [
     keywords: ["sweaters", "hoodies", "apparel", "mens"],
   },
 ].map((productDetails) => {
+  if (productDetails.type === "clothing") {
+    return new Clothing(productDetails);
+  }
   return new Products(productDetails);
 });
+
+
 // console.log(products);
 //? map(): is a method that creates a new array by applying a function to each element of the original array. In this case, it takes each productDetails object from the products array and transforms it into a new Products instance using the Products constructor. The resulting array will contain instances of the Products class instead of plain objects.

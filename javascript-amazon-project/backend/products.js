@@ -23,7 +23,46 @@ export class Products {
     return `$${formatCurrency(this.priceCents)}`;
   }
 
+  extraInfoHTML() {
+    return '';
+  }
+
 }
+
+export class Clothing extends Products {
+  sizeChartLink;
+
+  constructor(productDatails) {
+    super(productDatails);
+    this.sizeChartLink = productDatails.sizeChartLink;
+  }
+
+  // Overriding
+  extraInfoHTML() {
+    return `
+      <a href="${this.sizeChartLink}" target=_blank>
+        Size chart
+      </a>
+    `;
+  }
+
+}
+
+// const tshirt = new Clothing({
+//   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+//   image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+//   name: "Adults Plain Cotton T-Shirt - 2 Pack",
+//   rating: {
+//     stars: 4.5,
+//     count: 56,
+//   },
+//   priceCents: 799,
+//   keywords: ["tshirts", "apparel", "mens"],
+//   type: "clothing", 
+//   sizeChartLink: "images/clothing-size-chart.png",
+// });
+// console.log(tshirt);
+// console.log(tshirt.getPrice());
 
 // const product1 = new Products({
 //   id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
