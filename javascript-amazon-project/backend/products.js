@@ -45,8 +45,16 @@ export class Clothing extends Products {
       </a>
     `;
   }
-
 }
+
+/*
+function logThis() {
+  console.log(this)
+}
+// logThis();
+logThis.call('Hello'); // using .call(param), param value will set to this in function!
+*/
+
 
 // const tshirt = new Clothing({
 //   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
