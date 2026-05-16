@@ -24,9 +24,8 @@ export class Products {
   }
 
   extraInfoHTML() {
-    return '';
+    return "";
   }
-
 }
 
 export class Clothing extends Products {
@@ -47,6 +46,10 @@ export class Clothing extends Products {
   }
 }
 
+//? /**
+// 1. Inside a method, "this" points to the outer object (see screenshot 1)
+// 2. Inside a function, this = undefined BUT we can change it by using .call(<param>) 
+// 3. Arrow functions, don't change the value of "this" (see screenshot 2)*/
 /*
 function logThis() {
   console.log(this)
@@ -55,6 +58,12 @@ function logThis() {
 logThis.call('Hello'); // using .call(param), param value will set to this in function!
 */
 
+/* const object3 = {
+  methode: () => {
+    console.log(this); // und
+  },
+};
+object3.methode(); */
 
 // const tshirt = new Clothing({
 //   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
@@ -66,7 +75,7 @@ logThis.call('Hello'); // using .call(param), param value will set to this in fu
 //   },
 //   priceCents: 799,
 //   keywords: ["tshirts", "apparel", "mens"],
-//   type: "clothing", 
+//   type: "clothing",
 //   sizeChartLink: "images/clothing-size-chart.png",
 // });
 // console.log(tshirt);

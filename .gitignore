@@ -1,5 +1,7 @@
 # *lib*/
 
+screenshot*
+
 # macOS system files
 *.DS_Store
 
